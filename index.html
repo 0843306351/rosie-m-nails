@@ -1,458 +1,879 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#742044">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rosie m Nails | Nail Designer</title>
+
+<meta name="description" content="Rosie m Nails — beautiful nail designs, manicures, pedicures and lashes in Longill Zone C, Namakgale. Book on WhatsApp.">
+
 <style>
 :root {
-  --berry:#742044;
-  --rose:#b83f70;
-  --pink:#e98cae;
-  --blush:#f7d7e1;
-  --cream:#fff4ee;
-  --ink:#2c1822;
-  --muted:#745260;
+  --pink: #bd245c;
+  --deep: #84153d;
+  --light: #fff0f5;
+  --cream: #fffaf8;
+  --white: #ffffff;
+  --text: #40232f;
+  --muted: #795c68;
 }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
 body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
 }
-a { color:inherit;text-decoration:none; }
-img { max-width:100%;display:block; }
-.wrap { width:min(1100px,92%);margin:auto; }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 header {
-  background:var(--berry);
-  color:white;
-  position:sticky;
-  top:0;
-  z-index:10;
+  background: rgba(255,250,248,0.97);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #f4d5e0;
 }
-nav {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  padding:14px 0;
-  flex-wrap:wrap;
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
-.brand { font-family:Georgia,serif;font-size:24px; }
+
+.brand {
+  color: var(--deep);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
 .brand small {
-  display:block;
-  font-family:Arial,sans-serif;
-  font-size:10px;
-  letter-spacing:3px;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 4px;
 }
-.links { display:flex;gap:14px;flex-wrap:wrap;font-size:13px; }
-.btn {
-  display:inline-block;
-  padding:12px 18px;
-  background:var(--rose);
-  color:white;
-  border-radius:30px;
-  font-weight:bold;
-  margin:5px 4px 5px 0;
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
 }
-.btn.light { background:white;color:var(--berry); }
+
+nav a {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
 .hero {
-  color:white;
-  text-align:center;
-  padding:85px 0;
-  background:linear-gradient(135deg,#742044,#b83f70,#e98cae);
-  border-bottom:6px solid #f3c5d5;
+  background: linear-gradient(135deg, #84153d, #c32d65 60%, #e77ba0);
+  color: white;
+  padding: 60px 20px;
 }
-.hero .eyebrow {
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-size:12px;
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 35px;
+  align-items: center;
 }
-.hero h1 {
-  font-family:Georgia,serif;
-  font-size:clamp(42px,9vw,76px);
-  font-weight:normal;
-  line-height:1.05;
-  margin:15px 0;
-}
-.hero h1 span {
-  display:block;
-  font-family:Arial,sans-serif;
-  font-size:16px;
-  letter-spacing:5px;
-  margin-top:14px;
-}
-.hero p { max-width:520px;margin:15px auto; }
-section { padding:58px 0; }
-.section-head { text-align:center;max-width:700px;margin:0 auto 30px; }
-.section-head h2 {
-  color:var(--berry);
-  font:normal clamp(30px,5vw,43px) Georgia,serif;
-  margin:6px 0;
-}
+
 .eyebrow {
-  color:var(--rose);
-  font-weight:bold;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-size:12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 14px;
 }
-.features {
-  background:white;
-  text-align:center;
-  padding:24px 0;
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 7vw, 68px);
+  line-height: 1.08;
+  margin-bottom: 18px;
 }
-.feature-grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+
+.hero p {
+  font-size: 16px;
+  max-width: 490px;
+  margin-bottom: 25px;
+  color: #fff2f6;
 }
-.feature strong { display:block;color:var(--berry); }
-.feature span { color:var(--muted);font-size:13px; }
-.service-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+
+.hero-image {
+  height: 390px;
+  border-radius: 150px 150px 20px 20px;
+  overflow: hidden;
+  border: 5px solid rgba(255,255,255,0.35);
+  background: #f7c8d8;
 }
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 6px 4px 0;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-light {
+  background: white;
+  color: var(--deep);
+}
+
+.button-dark {
+  background: var(--deep);
+  color: white;
+}
+
+.button-outline {
+  border: 1px solid var(--deep);
+  color: var(--deep);
+}
+
+section {
+  padding: 65px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.section-heading span {
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 5vw, 43px);
+  line-height: 1.2;
+  color: var(--deep);
+  margin: 8px 0 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .service-card {
-  background:white;
-  border:1px solid #e9b8cb;
-  border-radius:15px;
-  overflow:hidden;
+  background: white;
+  border: 1px solid #f2dce4;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(100,25,55,0.05);
 }
-.service-card img { width:100%;height:220px;object-fit:cover; }
-.service-body { padding:16px; }
-.service-body h3 { color:var(--berry);font-family:Georgia,serif; }
-.gallery { background:linear-gradient(145deg,#f9dce5,#f4c2d3); }
-.gallery-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+
+.service-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
 }
-.gallery-item {
-  border:0;
-  padding:0;
-  background:white;
-  border-radius:12px;
-  overflow:hidden;
-  cursor:pointer;
+
+.service-content {
+  padding: 20px;
 }
-.gallery-item img {
-  width:100%;
-  height:260px;
-  object-fit:cover;
+
+.service-content h3 {
+  font-family: Georgia, serif;
+  color: var(--deep);
+  font-size: 22px;
+  margin-bottom: 6px;
 }
-.gallery-item span {
-  display:block;
-  padding:10px;
-  color:var(--berry);
-  font-weight:bold;
+
+.service-content p {
+  color: var(--muted);
+  font-size: 13px;
 }
-.price-layout {
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:25px;
-  align-items:start;
+
+.price-section {
+  background: var(--light);
 }
-.price-intro {
-  background:linear-gradient(145deg,#742044,#b83f70);
-  color:white;
-  border-radius:16px;
-  padding:26px;
-}
-.price-intro h2 { font:normal 36px Georgia,serif; }
+
 .price-list {
-  border:1px solid #e9b8cb;
-  border-radius:12px;
-  overflow:hidden;
+  max-width: 720px;
+  margin: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 10px 24px;
+  box-shadow: 0 8px 25px rgba(100,25,55,0.05);
 }
+
 .price-row {
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  padding:13px;
-  border-bottom:1px solid #e9b8cb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f4e0e7;
 }
-.price-row:nth-child(odd) { background:#fff; }
-.price-row:last-child { border-bottom:0; }
-.price-row strong { color:var(--berry);white-space:nowrap; }
-.note { color:var(--muted);font-size:12px; }
-.about-grid,.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  align-items:center;
+
+.price-row:last-child {
+  border-bottom: none;
 }
-.about-photo img {
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  border-radius:16px;
+
+.price-row span:first-child {
+  font-size: 14px;
 }
-.about-copy h2 {
-  font:normal 36px Georgia,serif;
-  color:var(--berry);
+
+.price {
+  color: var(--pink);
+  font-weight: bold;
+  white-space: nowrap;
 }
-.about-copy p { color:var(--muted); }
-.contact { background:#f7d7e1; }
-.contact-card,.book-panel {
-  padding:25px;
-  border-radius:16px;
-  background:white;
+
+.price-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 18px;
 }
-.contact-card h3,.book-panel h3 {
-  color:var(--berry);
-  font:normal 27px Georgia,serif;
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
-.contact-line { padding:12px 0;border-bottom:1px solid #e9b8cb; }
-.contact-line strong { display:block; }
-.book-panel { background:var(--berry);color:white; }
-.book-panel h3 { color:white; }
-footer { background:#742044;color:white;padding:25px 0; }
-.footer-row {
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
+
+.gallery-item {
+  border: none;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7d6e2;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
 }
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.about-section {
+  background: #fff0f5;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.about-image {
+  height: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f5c4d6;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin: 14px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #f2dce4;
+}
+
+.contact-card h3 {
+  font-family: Georgia, serif;
+  color: var(--deep);
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+.booking {
+  background: var(--deep);
+  color: white;
+  text-align: center;
+}
+
+.booking h2 {
+  color: white;
+}
+
+.booking p {
+  color: #fbe0e9;
+  margin: 10px 0 20px;
+}
+
+footer {
+  background: #3f1428;
+  color: #f8dce7;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer strong {
+  color: white;
+}
+
 .lightbox {
-  position:fixed;
-  inset:0;
-  z-index:100;
-  background:#160910ed;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: rgba(25,5,14,0.94);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-.lightbox.open { display:flex; }
-.lightbox img { max-height:85vh;max-width:90vw;object-fit:contain; }
-.close {
-  position:absolute;
-  right:18px;
-  top:12px;
-  font-size:30px;
-  background:white;
-  border:0;
-  border-radius:50%;
-  width:44px;
-  height:44px;
+
+.lightbox.open {
+  display: flex;
 }
-@media(max-width:700px) {
-  .feature-grid { grid-template-columns:repeat(2,1fr); }
-  .service-grid { grid-template-columns:repeat(2,1fr); }
-  .gallery-grid { grid-template-columns:repeat(2,1fr); }
-  .gallery-item img { height:210px; }
-  .price-layout,.about-grid,.contact-grid { grid-template-columns:1fr; }
-  .hero { padding:65px 0; }
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
 }
-@media(max-width:420px) {
-  .links { width:100%;justify-content:space-between;gap:8px;font-size:12px; }
-  .service-card img { height:150px; }
-  .gallery-item img { height:175px; }
+
+.lightbox button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: white;
+  color: var(--deep);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .hero-image {
+    height: 320px;
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .services {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+
+  .service-content {
+    padding: 14px;
+  }
+
+  .service-content h3 {
+    font-size: 19px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 290px;
+  }
+
+  section {
+    padding: 48px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 9px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="wrap">
+  <div class="nav">
+    <a href="#home" class="brand">
+      Rosie m Nails
+      <small>Nail Designer</small>
+    </a>
+
     <nav>
-      <a class="brand" href="#home">Rosie m Nails
-        <small>NAIL DESIGNER</small>
-      </a>
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#prices">Prices</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="btn" href="https://wa.me/27711338567">♡ Book Now</a>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#prices">Prices</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="wrap">
-    <div class="eyebrow">Nail Designer · Namakgale</div>
-    <h1>Rosie m Nails<span>NAIL DESIGNER</span></h1>
-    <h2>Feminine Soft Girl Nails</h2>
-    <p>Discover beautiful nail designs, browse the price list and contact Rosie m Nails to arrange your appointment.</p>
-    <a class="btn" href="https://wa.me/27711338567">♡ Book on WhatsApp</a>
-    <a class="btn light" href="#prices">View Price List</a>
-  </div>
-</section>
 
-<section class="features">
-  <div class="wrap feature-grid">
-    <div class="feature">✿<strong>Creative Designs</strong><span>Browse the gallery</span></div>
-    <div class="feature">♡<strong>Your Style</strong><span>Choose your favourite look</span></div>
-    <div class="feature">✧<strong>Clear Prices</strong><span>See prices upfront</span></div>
-    <div class="feature">☏<strong>Easy Booking</strong><span>Contact on WhatsApp</span></div>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Beauty • Detail • Confidence</div>
+      <h1>Beautiful nails.<br>Beautiful you.</h1>
+      <p>
+        Welcome to Rosie m Nails, your place for beautiful nail designs,
+        nail care and lashes in Namakgale.
+      </p>
+      <a class="button button-light"
+         href="https://wa.me/27711338567">
+        Book on WhatsApp
+      </a>
+      <a class="button button-outline"
+         href="#prices"
+         style="border-color:white;color:white">
+        View Prices
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="assets/IMG-20261027-WA0023.jpg"
+        alt="Nail design by Rosie m Nails"
+        fetchpriority="high">
+    </div>
   </div>
 </section>
 
 <section id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">A little self-care</div>
-      <h2>Services & Nail Looks</h2>
-      <p>Explore nail inspiration and contact Rosie m Nails to discuss your preferred design.</p>
+  <div class="container">
+    <div class="section-heading">
+      <span>What we offer</span>
+      <h2>Our Beauty Services</h2>
+      <p>
+        Choose a service that makes you feel confident and beautiful.
+        Contact us on WhatsApp to arrange your appointment.
+      </p>
     </div>
-    <div class="service-grid">
+
+    <div class="services">
       <article class="service-card">
-        <img src="assets/page-03.jpg" alt="Red nail design">
-        <div class="service-body"><h3>Nail Designs</h3><p>Beautiful colours and creative finishes.</p><a href="#gallery">Explore gallery →</a></div>
+        <img src="assets/IMG-20261027-WA0024.jpg"
+             alt="Nail design" loading="lazy">
+        <div class="service-content">
+          <h3>Nail Designs</h3>
+          <p>Choose short, medium or long nails with your preferred style.</p>
+        </div>
       </article>
+
       <article class="service-card">
-        <img src="assets/page-02.jpg" alt="Pink and gold nail design">
-        <div class="service-body"><h3>Soft Glam</h3><p>Elegant pink tones and details.</p><a href="#gallery">Explore gallery →</a></div>
+        <img src="assets/IMG-20261027-WA0025.jpg"
+             alt="Nail art" loading="lazy">
+        <div class="service-content">
+          <h3>Nail Art</h3>
+          <p>Add beautiful details to your nails with nail art options.</p>
+        </div>
       </article>
+
       <article class="service-card">
-        <img src="assets/page-08.jpg" alt="Nail art">
-        <div class="service-body"><h3>Nail Art</h3><p>Add creative details to your look.</p><a href="#prices">See prices →</a></div>
+        <img src="assets/IMG-20261027-WA0026.jpg"
+             alt="Nail care" loading="lazy">
+        <div class="service-content">
+          <h3>Nail Care</h3>
+          <p>Buff and shine, gel manicure and pedicure services.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/IMG-20261027-WA0028.jpg"
+             alt="Nail design inspiration" loading="lazy">
+        <div class="service-content">
+          <h3>Refills</h3>
+          <p>Ask us about refill appointments and keeping your nails looking good.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/FB_IMG_1793135144100.jpg"
+             alt="Beauty style inspiration" loading="lazy">
+        <div class="service-content">
+          <h3>Cluster Lashes</h3>
+          <p>Choose between using your own lashes or lashes supplied by us.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/FB_IMG_1793135155554.jpg"
+             alt="Beauty look inspiration" loading="lazy">
+        <div class="service-content">
+          <h3>Cateye Lashes</h3>
+          <p>Contact us to book your lash appointment.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="gallery" id="gallery">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Real designs</div>
-      <h2>My Gallery</h2>
-      <p>Tap a photo to view it larger. We will add your pictures in the next step.</p>
+<section class="price-section" id="prices">
+  <div class="container">
+    <div class="section-heading">
+      <span>Simple and clear</span>
+      <h2>Our Price List</h2>
+      <p>Choose your service and contact us to make a booking.</p>
     </div>
-    <div class="gallery-grid">
-      <button class="gallery-item" data-img="assets/page-02.jpg"><img src="assets/page-02.jpg" alt="Pink and gold nails"><span>Pink & Gold</span></button>
-      <button class="gallery-item" data-img="assets/page-03.jpg"><img src="assets/page-03.jpg" alt="Red nail design"><span>Bold Red</span></button>
-      <button class="gallery-item" data-img="assets/page-04.jpg"><img src="assets/page-04.jpg" alt="Nail inspiration"><span>Nail Inspiration</span></button>
-      <button class="gallery-item" data-img="assets/page-05.jpg"><img src="assets/page-05.jpg" alt="Nail design"><span>Soft Pink</span></button>
-      <button class="gallery-item" data-img="assets/page-06.jpg"><img src="assets/page-06.jpg" alt="Pedicure design"><span>Pedicure</span></button>
-      <button class="gallery-item" data-img="assets/page-07.jpg"><img src="assets/page-07.jpg" alt="Nail design"><span>Classic Detail</span></button>
-      <button class="gallery-item" data-img="assets/page-08.jpg"><img src="assets/page-08.jpg" alt="Nail art"><span>Creative Nail Art</span></button>
-      <button class="gallery-item" data-img="assets/page-09.jpg"><img src="assets/page-09.jpg" alt="Red nails"><span>Red Accent</span></button>
-      <button class="gallery-item" data-img="assets/page-10.jpg"><img src="assets/page-10.jpg" alt="Nail design"><span>Elegant Finish</span></button>
-      <button class="gallery-item" data-img="assets/page-11.jpg"><img src="assets/page-11.jpg" alt="Nail design"><span>Everyday Glam</span></button>
-      <button class="gallery-item" data-img="assets/page-12.jpg"><img src="assets/page-12.jpg" alt="Nail design"><span>Golden Detail</span></button>
-      <button class="gallery-item" data-img="assets/page-13.jpg"><img src="assets/page-13.jpg" alt="Pedicure"><span>Toe Nail Design</span></button>
-      <button class="gallery-item" data-img="assets/page-14.jpg"><img src="assets/page-14.jpg" alt="Long nail art"><span>Long Nail Art</span></button>
-      <button class="gallery-item" data-img="assets/page-15.jpg"><img src="assets/page-15.jpg" alt="Colourful nails"><span>Colour Pop</span></button>
-      <button class="gallery-item" data-img="assets/page-16.jpg"><img src="assets/page-16.jpg" alt="Natural nail design"><span>Natural Elegance</span></button>
-    </div>
-  </div>
-</section>
 
-<section id="prices">
-  <div class="wrap price-layout">
-    <div class="price-intro">
-      <div class="eyebrow" style="color:#ffd8e5">Rosie m Nails</div>
-      <h2>Price List</h2>
-      <p>Choose your style and contact Rosie m Nails to ask about an appointment.</p>
-      <a class="btn light" href="https://wa.me/27711338567">Ask about prices</a>
-    </div>
     <div class="price-list">
-      <div class="price-row"><span>Short nails</span><strong>R120</strong></div>
-      <div class="price-row"><span>Medium nails</span><strong>R150</strong></div>
-      <div class="price-row"><span>Long nails</span><strong>R200</strong></div>
-      <div class="price-row"><span>Nail art (add-ons)</span><strong>R5</strong></div>
-      <div class="price-row"><span>Buff & shine</span><strong>R70</strong></div>
-      <div class="price-row"><span>Gel manicure/pedicure</span><strong>R100</strong></div>
-      <div class="price-row"><span>Refill</span><strong>R80</strong></div>
-      <div class="price-row"><span>Cluster lashes (own lash)</span><strong>R50</strong></div>
-      <div class="price-row"><span>Cluster lashes (mine)</span><strong>R80</strong></div>
-      <div class="price-row"><span>Cateye lashes</span><strong>R100</strong></div>
+      <div class="price-row">
+        <span>Short Nails</span>
+        <span class="price">R120</span>
+      </div>
+      <div class="price-row">
+        <span>Medium Nails</span>
+        <span class="price">R150</span>
+      </div>
+      <div class="price-row">
+        <span>Long Nails</span>
+        <span class="price">R200</span>
+      </div>
+      <div class="price-row">
+        <span>Nail Art Add-ons</span>
+        <span class="price">R5</span>
+      </div>
+      <div class="price-row">
+        <span>Buff &amp; Shine</span>
+        <span class="price">R70</span>
+      </div>
+      <div class="price-row">
+        <span>Gel Manicure / Pedicure</span>
+        <span class="price">R100</span>
+      </div>
+      <div class="price-row">
+        <span>Refill</span>
+        <span class="price">R80</span>
+      </div>
+      <div class="price-row">
+        <span>Cluster Lashes (Your Own)</span>
+        <span class="price">R50</span>
+      </div>
+      <div class="price-row">
+        <span>Cluster Lashes (Our Lashes)</span>
+        <span class="price">R80</span>
+      </div>
+      <div class="price-row">
+        <span>Cateye Lashes</span>
+        <span class="price">R100</span>
+      </div>
+    </div>
+
+    <p class="price-note">
+      For questions about a service or appointment, please contact us directly.
+    </p>
+
+    <div style="text-align:center;margin-top:24px">
+      <a class="button button-dark"
+         href="https://wa.me/27711338567?text=Hello%20Rosie%20m%20Nails%2C%20I%20would%20like%20to%20book.">
+        Book a Service
+      </a>
     </div>
   </div>
-  <p class="wrap note">Please confirm service details and availability directly with Rosie m Nails.</p>
 </section>
 
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="about-photo"><img src="assets/page-05.jpg" alt="Nail design by Rosie m Nails"></div>
+<section id="gallery">
+  <div class="container">
+    <div class="section-heading">
+      <span>Our work</span>
+      <h2>Nail Gallery</h2>
+      <p>
+        Explore our nail pictures. Tap any picture to see it larger.
+      </p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="assets/IMG-20261027-WA0032.jpg"
+           alt="Nail design from Rosie m Nails"
+           loading="lazy">
+    </div>
+
     <div class="about-copy">
-      <div class="eyebrow">About Rosie m Nails</div>
-      <h2>Feminine, soft girl nails.</h2>
-      <p>Rosie m Nails is a nail designer based in Longill Zone C, Namakgale, on Lehlabong Creche Street.</p>
-      <p>Browse the gallery for inspiration, then contact the nail designer to discuss the look you want and arrange your appointment.</p>
-      <a class="btn" href="#contact">Contact & Booking</a>
+      <div class="eyebrow" style="color:var(--pink)">
+        Welcome to Rosie m Nails
+      </div>
+      <h2>Your beauty, your style.</h2>
+      <p>
+        Rosie m Nails offers nail designs, nail care and lash services
+        in Namakgale.
+      </p>
+      <p>
+        Have a design in mind? Send us a message on WhatsApp to ask
+        about our services and arrange an appointment.
+      </p>
+      <a class="button button-dark"
+         href="https://wa.me/27711338567">
+        Chat With Us
+      </a>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Let's get you booked</div>
-      <h2>Contact Rosie m Nails</h2>
-      <p>Contact either number to ask about services and appointments.</p>
+<section id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <span>Get in touch</span>
+      <h2>Visit or Contact Us</h2>
+      <p>We look forward to hearing from you.</p>
     </div>
+
     <div class="contact-grid">
       <div class="contact-card">
-        <h3>Find Us & Contact Us</h3>
-        <div class="contact-line"><strong>Location</strong>Longill Zone C, Namakgale<br>Lehlabong Creche Street</div>
-        <div class="contact-line"><strong>Phone / WhatsApp</strong><a href="tel:0711338567">071 133 8567</a></div>
-        <div class="contact-line"><strong>Alternative number</strong><a href="tel:0683846294">068 384 6294</a></div>
+        <h3>Our Location</h3>
+        <p><strong>Area:</strong> Longill Zone C, Namakgale</p>
+        <p><strong>Landmark:</strong> Lehlabong Creche Street</p>
+        <p>
+          Please contact us before travelling to confirm your appointment.
+        </p>
       </div>
-      <div class="book-panel">
-        <h3>Ready for your next set?</h3>
-        <p>Send a message to ask about a design, check service details or request an appointment.</p>
-        <a class="btn light" href="https://wa.me/27711338567">WhatsApp 071 133 8567</a>
-        <a class="btn light" href="https://wa.me/27683846294">WhatsApp 068 384 6294</a>
+
+      <div class="contact-card">
+        <h3>WhatsApp Booking</h3>
+        <p><strong>WhatsApp 1:</strong> 071 133 8567</p>
+        <a class="button button-dark"
+           href="https://wa.me/27711338567">
+          Message Rosie
+        </a>
+
+        <p style="margin-top:15px">
+          <strong>Alternative:</strong> 068 384 6294
+        </p>
+        <a class="button button-outline"
+           href="https://wa.me/27683846294">
+          Alternative WhatsApp
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+<section class="booking">
+  <div class="container">
+    <div class="eyebrow">Your next appointment</div>
+    <h2>Ready for your new look?</h2>
+    <p>Send us a WhatsApp message to enquire about a booking.</p>
+    <a class="button button-light"
+       href="https://wa.me/27711338567?text=Hello%20Rosie%20m%20Nails%2C%20I%20would%20like%20to%20make%20a%20booking.">
+      Book on WhatsApp
+    </a>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <div class="wrap footer-row">
-    <div class="brand">Rosie m Nails<small>NAIL DESIGNER</small></div>
-    <div>Longill Zone C, Namakgale · Lehlabong Creche Street</div>
-    <div>© Rosie m Nails</div>
-  </div>
+  <p><strong>Rosie m Nails</strong> — Nail Designer</p>
+  <p>Longill Zone C, Namakgale</p>
+  <p style="margin-top:8px">
+    &copy; <span id="year"></span> Rosie m Nails. All rights reserved.
+  </p>
 </footer>
 
-<div class="lightbox" id="lightbox">
-  <button class="close" id="closeLightbox" aria-label="Close image">×</button>
-  <img id="lightboxImg" src="" alt="Expanded nail design">
+<div class="lightbox" id="lightbox" aria-label="Enlarged nail picture">
+  <button type="button" id="closeLightbox" aria-label="Close picture">×</button>
+  <img id="lightboxImage" src="" alt="Enlarged nail design">
 </div>
 
 <script>
-const box = document.getElementById('lightbox');
-const big = document.getElementById('lightboxImg');
+const pictures = [
+  "IMG-20261027-WA0023.jpg",
+  "IMG-20261027-WA0024.jpg",
+  "IMG-20261027-WA0025.jpg",
+  "IMG-20261027-WA0026.jpg",
+  "IMG-20261027-WA0028.jpg",
+  "IMG-20261027-WA0029.jpg",
+  "IMG-20261027-WA0030.jpg",
+  "IMG-20261027-WA0031.jpg",
+  "IMG-20261027-WA0032.jpg",
+  "IMG-20261027-WA0033.jpg",
+  "IMG-20261027-WA0034.jpg",
+  "IMG-20261027-WA0035.jpg",
+  "IMG-20261027-WA0036.jpg",
+  "IMG-20261027-WA0037.jpg",
+  "FB_IMG_1793135144100.jpg",
+  "FB_IMG_1793135155554.jpg"
+];
 
-document.querySelectorAll('.gallery-item').forEach(button => {
-  button.addEventListener('click', () => {
-    big.src = button.dataset.img;
-    big.alt = button.querySelector('img').alt;
-    box.classList.add('open');
+const gallery = document.getElementById("galleryGrid");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+
+pictures.forEach((filename, index) => {
+  const button = document.createElement("button");
+  button.className = "gallery-item";
+  button.type = "button";
+  button.setAttribute("aria-label", "View nail picture " + (index + 1));
+
+  const img = document.createElement("img");
+  img.src = "assets/" + filename;
+  img.alt = "Rosie m Nails design " + (index + 1);
+  img.loading = "lazy";
+
+  button.appendChild(img);
+
+  button.addEventListener("click", () => {
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightbox.classList.add("open");
   });
+
+  gallery.appendChild(button);
 });
 
-function closeBox() {
-  box.classList.remove('open');
-  big.src = '';
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImage.src = "";
 }
 
-document.getElementById('closeLightbox').addEventListener('click', closeBox);
+document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
 
-box.addEventListener('click', event => {
-  if (event.target === box) closeBox();
+lightbox.addEventListener("click", function(event) {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
 
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') closeBox();
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
-  </html>
-  
+</html>
